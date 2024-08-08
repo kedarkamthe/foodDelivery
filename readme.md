@@ -2,6 +2,13 @@
 
 # Spring Modulith Implementation
 
+### Data Setup 
+--------
+1. Navigate to datasetup directory
+2. Run `./setupData.sh` file
+3. After successful execution of step-2 it adds sample data
+
+
 
 ### Learnings
 

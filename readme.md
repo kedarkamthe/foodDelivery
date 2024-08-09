@@ -11,6 +11,8 @@
     * [How Spring Modulith Behaves when we have  `@Externalized` event to kafka and also has one event listener in Application](#how-spring-modulith-behaves-when-we-have-externalized-event-to-kafka-and-also-has-one-event-listener-in-application)
     * [Postman Collection for API's present in Project](#postman-collection-for-apis-present-in-project)
     * [Useful Commands](#useful-commands)
+  * [Reference](#reference-)
+    * [Comparison between Microservice ,Traditional Monolith and Modular Monolith](#comparison-between-microservice-traditional-monolith-and-modular-monolith-)
 <!-- TOC -->
 
 ### Data Setup

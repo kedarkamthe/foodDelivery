@@ -76,3 +76,13 @@ another event for event listener in Application in `event_publication` table
 - To make container service down  `podman-compose down`
 
 -------
+## Reference 
+
+-------
+
+### Comparison between Microservice ,Traditional Monolith and Modular Monolith   
+
+-------
+![img.png](comparison.png)
+
+-------

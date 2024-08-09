@@ -1,0 +1,410 @@
+{
+	"info": {
+		"_postman_id": "96a3bdb8-e6eb-481d-b2b9-583aa7feaacd",
+		"name": "FoodDelivery Modulith",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30221950"
+	},
+	"item": [
+		{
+			"name": "Order Food",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/foodDelivery/foodOrders?foodId=202",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"foodDelivery",
+						"foodOrders"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "500",
+							"disabled": true
+						},
+						{
+							"key": "foodId",
+							"value": "202"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Order Food",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/foodDelivery/foodOrders?foodId=202",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"foodDelivery",
+								"foodOrders"
+							],
+							"query": [
+								{
+									"key": "orderId",
+									"value": "500",
+									"disabled": true
+								},
+								{
+									"key": "foodId",
+									"value": "202"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Location",
+							"value": "http://localhost:8080/foodDelivery/foodOrders/10001?foodId=202"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 09 Aug 2024 09:35:29 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Order 10001 is placed successfully."
+				}
+			]
+		},
+		{
+			"name": "Get All Delivery Agents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/foodDelivery/agents",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"foodDelivery",
+						"agents"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Delivery Agents",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/foodDelivery/agents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"foodDelivery",
+								"agents"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/hal+json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 09 Aug 2024 09:51:30 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_embedded\": {\n        \"agents\": [\n            {\n                \"reserved\": false,\n                \"orderId\": null,\n                \"name\": \"Matt\",\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"http://localhost:8080/foodDelivery/agents/103\"\n                    },\n                    \"agent\": {\n                        \"href\": \"http://localhost:8080/foodDelivery/agents/103\"\n                    }\n                }\n            },\n            {\n                \"reserved\": false,\n                \"orderId\": null,\n                \"name\": \"Bob\",\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"http://localhost:8080/foodDelivery/agents/101\"\n                    },\n                    \"agent\": {\n                        \"href\": \"http://localhost:8080/foodDelivery/agents/101\"\n                    }\n                }\n            },\n            {\n                \"reserved\": true,\n                \"orderId\": 10001,\n                \"name\": \"Alice\",\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"http://localhost:8080/foodDelivery/agents/102\"\n                    },\n                    \"agent\": {\n                        \"href\": \"http://localhost:8080/foodDelivery/agents/102\"\n                    }\n                }\n            }\n        ]\n    },\n    \"_links\": {\n        \"self\": {\n            \"href\": \"http://localhost:8080/foodDelivery/agents\"\n        },\n        \"profile\": {\n            \"href\": \"http://localhost:8080/foodDelivery/profile/agents\"\n        },\n        \"search\": {\n            \"href\": \"http://localhost:8080/foodDelivery/agents/search\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Food",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"isReserved\": \"false\",\n    \"name\": \"Fries\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/foodDelivery/foods",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"foodDelivery",
+						"foods"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Food By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/foods/101",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"foods",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Delivery Agent By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/agents/104",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agents",
+						"104"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Foods",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/foodDelivery/foods",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"foodDelivery",
+						"foods"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Food Order By Order Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/foodDelivery/foodOrders/10001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"foodDelivery",
+						"foodOrders",
+						"10001"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Food Order By Order Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/foodDelivery/foodOrders/10001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"foodDelivery",
+								"foodOrders",
+								"10001"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 09 Aug 2024 09:54:48 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 10001,\n    \"booked\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Delivery Agent",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Alice\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/foodDelivery/agents",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"foodDelivery",
+						"agents"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

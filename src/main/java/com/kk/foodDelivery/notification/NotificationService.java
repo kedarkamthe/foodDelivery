@@ -9,8 +9,10 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class NotificationService {
 
+
+
         @ApplicationModuleListener
-        void orderPlacedListener(OrderPlaced orderPlaced){
+        void orderPlacedListener(OrderPlaced orderPlaced) throws InterruptedException {
             System.out.println("orderPlacedListener : Orderplace notification sent for order id "+orderPlaced.orderId());
         }
 }

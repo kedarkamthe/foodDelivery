@@ -11,7 +11,7 @@ public class NotificationService {
 
 
 
-        //@ApplicationModuleListener
+        @ApplicationModuleListener
         void orderPlacedListener(OrderPlaced orderPlaced) throws InterruptedException {
             System.out.println("orderPlacedListener : Orderplace notification sent for order id "+orderPlaced.orderId());
         }

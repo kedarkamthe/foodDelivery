@@ -8,7 +8,9 @@
     * [Learnings](#learnings)
     * [How Spring Modulith Behaves when there are multiple instance of same application deployed (Without `@Externalized` )](#how-spring-modulith-behaves-when-there-are-multiple-instance-of-same-application-deployed-without-externalized-)
     * [After Using `@Externalized` annotation](#after-using-externalized-annotation)
+    * [How Spring Modulith Behaves when we have  `@Externalized` event to kafka and also has one event listener in Application](#how-spring-modulith-behaves-when-we-have-externalized-event-to-kafka-and-also-has-one-event-listener-in-application)
     * [Postman Collection for API's present in Project](#postman-collection-for-apis-present-in-project)
+    * [Useful Commands](#useful-commands)
 <!-- TOC -->
 
 ### Data Setup
@@ -52,6 +54,14 @@
    `kafka-console-consumer --bootstrap-server localhost:29092 --topic FoodOrderPlaced --from-beginning`
 -------
 
+### How Spring Modulith Behaves when we have  `@Externalized` event to kafka and also has one event listener in Application
+
+-------
+- It creates one event of type `org.springframework.modulith.events.support.DelegatingEventExternalizer.externalize(java.lang.Object)` for kafka and
+another event for event listener in Application in `event_publication` table
+
+-------
+
 ### Postman Collection for API's present in Project
 
 -------
@@ -59,4 +69,10 @@
 2. Import `FoodDelivery.postman_collection.json` file in postman.
 -------
 
+### Useful Commands
 
+-------
+- To make container service up  `podman-compose up -d`
+- To make container service down  `podman-compose down`
+
+-------
